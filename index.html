@@ -2,17 +2,219 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+<!-- Benvenuto -->
+<section class="section">
+  <div class="container">
+    <div class="row align-items-center">
 
-      <div class="entry">
-        {{ post.excerpt }}
+      <div class="col-lg-7">
+        <h2>Benvenuti</h2>
+        <p>
+          Questo portale raccoglie attività, progetti, documenti e iniziative
+          promosse da Gabriel Jones.
+        </p>
+
+        <p>
+          L'obiettivo è garantire trasparenza, accesso alle informazioni
+          e aggiornamenti costanti sulle attività istituzionali e pubbliche.
+        </p>
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+      <div class="col-lg-5">
+        <div class="card-custom">
+          <h4>Missione</h4>
+          <p>
+            Favorire partecipazione, innovazione e collaborazione
+            attraverso strumenti digitali aperti e accessibili.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Ultime notizie -->
+<section class="section bg-light">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <h2>Ultime Notizie</h2>
+      <p>Aggiornamenti e comunicazioni recenti.</p>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-4 mb-4">
+        <div class="card-custom">
+          <h4>Nuovo progetto digitale</h4>
+          <p>
+            Avviata una nuova iniziativa per migliorare
+            l'accessibilità dei servizi online.
+          </p>
+          <a href="#">Leggi di più →</a>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card-custom">
+          <h4>Pubblicazione documenti</h4>
+          <p>
+            Aggiornata la sezione archivio con nuovi documenti
+            e materiali consultabili.
+          </p>
+          <a href="#">Leggi di più →</a>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card-custom">
+          <h4>Incontro pubblico</h4>
+          <p>
+            Presentazione delle attività e confronto con
+            associazioni e cittadini.
+          </p>
+          <a href="#">Leggi di più →</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Progetti -->
+<section class="section">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <h2>Progetti in Evidenza</h2>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-4 mb-4">
+        <div class="card-custom">
+          <h4>Open Data</h4>
+          <p>
+            Accesso semplificato a dati e documentazione pubblica.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card-custom">
+          <h4>Partecipazione Civica</h4>
+          <p>
+            Strumenti per coinvolgere cittadini e organizzazioni.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card-custom">
+          <h4>Innovazione Digitale</h4>
+          <p>
+            Soluzioni tecnologiche per servizi più efficienti.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Agenda -->
+<section class="section bg-light">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <h2>Agenda</h2>
+      <p>Prossimi appuntamenti</p>
+    </div>
+
+    <div class="schedule">
+
+      <div class="card mb-3 event-card">
+        <div class="card-body">
+          <div class="time">15 Marzo 2026</div>
+          <h5>Incontro con associazioni locali</h5>
+          <div class="room">Sala Conferenze</div>
+        </div>
+      </div>
+
+      <div class="card mb-3 event-card">
+        <div class="card-body">
+          <div class="time">28 Marzo 2026</div>
+          <h5>Presentazione nuovo progetto</h5>
+          <div class="room">Evento pubblico</div>
+        </div>
+      </div>
+
+      <div class="card event-card">
+        <div class="card-body">
+          <div class="time">12 Aprile 2026</div>
+          <h5>Forum sulla partecipazione civica</h5>
+          <div class="room">Online</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Trasparenza -->
+<section class="section">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-6 mb-4">
+        <div class="card-custom">
+          <h3>Archivio Documentale</h3>
+          <p>
+            Consulta documenti, relazioni, pubblicazioni e atti.
+          </p>
+          <a href="https://gj-on.github.io/archivio/" class="btn btn-primary">
+            Vai all'archivio
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mb-4">
+        <div class="card-custom">
+          <h3>FOIA e Trasparenza</h3>
+          <p>
+            Accesso civico e richieste di informazioni pubbliche.
+          </p>
+          <a href="https://gj-on.github.io/foia/" class="btn btn-primary">
+            Maggiori informazioni
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA finale -->
+<section style="background:#6d91c7;color:white;padding:80px 0;">
+  <div class="container text-center">
+
+    <h2>Resta aggiornato</h2>
+
+    <p class="mt-3">
+      Segui attività, progetti e pubblicazioni attraverso il portale ufficiale.
+    </p>
+
+    <a href="https://gj-on.github.io/about/"
+       class="btn btn-light btn-lg mt-3">
+      Scopri di più
+    </a>
+
+  </div>
+</section>
