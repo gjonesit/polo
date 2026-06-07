@@ -264,150 +264,347 @@ title: Gabriel Jones
 </main>
 
 <style>
-  .section-header span{
-  color:#6d91c7;
+:root{
+  --primary:#4f7ecf;
+  --primary-dark:#315ea9;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+  --bg:#ffffff;
+  --bg-soft:#f8fafc;
+  --shadow:0 10px 30px rgba(0,0,0,.08);
+  --radius:18px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Inter,system-ui,sans-serif;
+  color:var(--text);
+  line-height:1.7;
+  background:white;
+}
+
+.container{
+  width:min(1200px,92%);
+  margin:auto;
+}
+
+/* SECTIONS */
+
+section{
+  padding:clamp(4rem,8vw,7rem) 0;
+}
+
+/* TITOLI */
+
+.section-header{
+  margin-bottom:3rem;
+}
+
+.section-header span{
+  color:var(--primary);
   text-transform:uppercase;
-  font-size:12px;
+  font-size:.75rem;
   letter-spacing:2px;
   font-weight:700;
 }
 
-.section-header{
-  margin-bottom:40px;
+.section-header h2{
+  font-size:clamp(2rem,4vw,3rem);
+  margin-top:.5rem;
 }
 
+/* HERO */
+
 .intro-section{
-  padding:90px 0;
+  background:
+  linear-gradient(
+    135deg,
+    #f8fbff 0%,
+    #eef4ff 100%
+  );
 }
 
 .intro-grid{
   display:grid;
   grid-template-columns:2fr 1fr;
-  gap:60px;
+  gap:4rem;
+  align-items:center;
+}
+
+.section-tag{
+  display:inline-block;
+  background:#e8f0ff;
+  color:var(--primary);
+  padding:.5rem 1rem;
+  border-radius:999px;
+  font-weight:600;
+  margin-bottom:1rem;
+}
+
+.intro-section h2{
+  font-size:clamp(2.5rem,5vw,4.5rem);
+  line-height:1.1;
+  margin-bottom:1.5rem;
+}
+
+.intro-section p{
+  font-size:1.1rem;
+  color:var(--muted);
+  max-width:700px;
 }
 
 .intro-card{
-  background:#f7f9fc;
-  padding:35px;
-  border-left:5px solid #6d91c7;
+  background:rgba(255,255,255,.8);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.5);
+  padding:2rem;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
 }
 
+.intro-card h4{
+  margin:.7rem 0;
+}
+
+.intro-card a{
+  color:var(--primary);
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* NEWS */
+
 .news-section{
-  padding:90px 0;
-  background:#fafafa;
+  background:var(--bg-soft);
 }
 
 .news-grid{
   display:grid;
   grid-template-columns:2fr 1fr;
-  gap:50px;
+  gap:2rem;
+}
+
+.featured-article{
+  background:white;
+  padding:2rem;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+.article-category{
+  color:var(--primary);
+  font-size:.8rem;
+  font-weight:700;
+  letter-spacing:1px;
 }
 
 .featured-article h3{
-  font-size:2rem;
-  margin:20px 0;
+  font-size:clamp(1.8rem,3vw,2.8rem);
+  margin:1rem 0;
+}
+
+.featured-article p{
+  color:var(--muted);
+}
+
+.featured-article a{
+  display:inline-block;
+  margin-top:1.5rem;
+  text-decoration:none;
+  color:var(--primary);
+  font-weight:600;
 }
 
 .news-sidebar{
-  display:flex;
-  flex-direction:column;
+  background:white;
+  border-radius:var(--radius);
+  padding:1rem 1.5rem;
+  box-shadow:var(--shadow);
 }
 
 .news-sidebar a{
-  padding:18px 0;
-  border-bottom:1px solid #ddd;
+  display:block;
+  padding:1rem 0;
+  color:var(--text);
   text-decoration:none;
-  color:#333;
+  border-bottom:1px solid var(--border);
+  transition:.25s;
 }
 
-.projects-section,
-.documents-section,
-.timeline-section{
-  padding:90px 0;
+.news-sidebar a:hover{
+  color:var(--primary);
+  padding-left:10px;
 }
+
+/* PROGETTI */
 
 .projects-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:30px;
+  gap:2rem;
 }
 
 .project-box{
-  padding:35px;
-  border:1px solid #e6e6e6;
+  background:white;
+  border:1px solid var(--border);
+  padding:2rem;
+  border-radius:var(--radius);
+  transition:.3s;
 }
+
+.project-box:hover{
+  transform:translateY(-8px);
+  box-shadow:var(--shadow);
+}
+
+.project-box h4{
+  margin-bottom:.8rem;
+}
+
+/* TIMELINE */
 
 .timeline{
-  display:flex;
-  justify-content:space-between;
-  position:relative;
-}
-
-.timeline::before{
-  content:"";
-  position:absolute;
-  top:24px;
-  left:0;
-  width:100%;
-  height:2px;
-  background:#d7deeb;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2rem;
 }
 
 .timeline-item{
-  position:relative;
-  z-index:2;
-  width:30%;
+  background:white;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:2rem;
+  text-align:center;
+  box-shadow:var(--shadow);
 }
 
 .dot{
-  width:48px;
-  height:48px;
+  width:60px;
+  height:60px;
+  margin:auto auto 1rem;
   border-radius:50%;
-  background:#6d91c7;
+  background:var(--primary);
   color:white;
   display:flex;
   align-items:center;
   justify-content:center;
   font-weight:700;
-  margin-bottom:15px;
+  font-size:1.1rem;
 }
+
+/* DOCUMENTI */
 
 .docs-table{
   width:100%;
   border-collapse:collapse;
+  background:white;
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+
+.docs-table tr:hover{
+  background:#f9fbff;
 }
 
 .docs-table td{
-  padding:18px;
-  border-bottom:1px solid #e6e6e6;
+  padding:1.25rem;
+  border-bottom:1px solid var(--border);
 }
 
+/* STATS */
+
 .stats-section{
-  background:#6d91c7;
+  background:
+  linear-gradient(
+    135deg,
+    var(--primary),
+    var(--primary-dark)
+  );
   color:white;
-  padding:90px 0;
 }
 
 .stats-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
+  gap:2rem;
   text-align:center;
 }
 
 .stats-grid h2{
-  font-size:58px;
-  font-weight:700;
+  font-size:clamp(2.5rem,5vw,4rem);
 }
 
+/* QUOTE */
+
 .quote-section{
-  padding:100px 0;
   text-align:center;
 }
 
 .quote-section blockquote{
-  font-size:2rem;
-  font-weight:600;
+  font-size:clamp(1.8rem,4vw,3rem);
+  font-weight:700;
   max-width:900px;
   margin:auto;
+  line-height:1.3;
 }
-</style>
+
+.quote-section p{
+  margin-top:1rem;
+  color:var(--muted);
+}
+
+/* MOBILE */
+
+@media (max-width:900px){
+
+  .intro-grid,
+  .news-grid,
+  .projects-grid,
+  .stats-grid,
+  .timeline{
+    grid-template-columns:1fr;
+  }
+
+  .intro-section h2{
+    font-size:2.5rem;
+  }
+
+  .stats-grid{
+    gap:3rem;
+  }
+
+  .timeline-item{
+    text-align:left;
+  }
+}
+
+@media (max-width:600px){
+
+  .docs-table{
+    display:block;
+    overflow-x:auto;
+    white-space:nowrap;
+  }
+
+  section{
+    padding:4rem 0;
+  }
+
+  .featured-article,
+  .project-box,
+  .timeline-item,
+  .intro-card{
+    padding:1.5rem;
+  }
+}</style>
